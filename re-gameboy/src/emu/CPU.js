@@ -1,7 +1,4 @@
 class CPU {
-    const PC;
-    const SP;
-
     getCurrentOpcode()
     {
         let opcode = 0;
