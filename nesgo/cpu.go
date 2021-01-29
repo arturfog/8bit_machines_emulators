@@ -1,7 +1,11 @@
-interface CPU
-{
+package nesgo
+
+type CPU struct {
 }
 
-func reset(CPU* cpu)
-{
+func reset(cpu *CPU) {
+}
+
+func interrupt(cpu *CPU) {
+
 }

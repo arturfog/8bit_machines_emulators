@@ -1,0 +1,54 @@
+package nesgo
+
+const InstructionModeMask = 0x3
+
+const OperationMask = 0xe0
+const OperationShift = 5
+
+const AddrModeMask = 0x1c
+const AddrModeShift = 2
+
+const BranchInstructionMask = 0x1f
+const BranchInstructionMaskResult = 0x10
+const BranchConditionMask = 0x20
+const BranchOnFlagShift = 6
+
+const NMIVector = 0xfffa
+const ResetVector = 0xfffc
+const IRQVector = 0xfffe
+
+const (
+	NOP = 0xea
+	BRK = 0x00
+	JSR = 0x20
+	RTI = 0x40
+	RTS = 0x60
+
+	JMP  = 0x4C
+	JMPI = 0x6C //JMP Indirect
+
+	PHP = 0x08
+	PLP = 0x28
+	PHA = 0x48
+	PLA = 0x68
+
+	DEY = 0x88
+	DEX = 0xca
+	TAY = 0xa8
+	INY = 0xc8
+	INX = 0xe8
+
+	CLC = 0x18
+	SEC = 0x38
+	CLI = 0x58
+	SEI = 0x78
+	TYA = 0x98
+	CLV = 0xb8
+	CLD = 0xd8
+	SED = 0xf8
+
+	TXA = 0x8a
+	TXS = 0x9a
+	TAX = 0xaa
+	TSX = 0xba
+)
